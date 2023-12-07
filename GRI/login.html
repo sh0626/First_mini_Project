@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>로그인 </title>
+	<meta charset="UTF-8">
+	<meta name="description" content="EndGam Gaming Magazine Template">
+	<meta name="keywords" content="endGam,gGaming, magazine, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon-16x16.png" rel="shortcut icon"/>
+
+	<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min2.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style22.css" />
+
+	
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-warp">
+			<div class="user-panel d-flex justify-content-end">		
+				<p id="logout"><a href="login.html">로그인</a><a href="register.html">회원가입</a></p>
+			</div>
+			<div class="header-bar-warp d-flex">
+				<!-- site logo -->
+				<a href="index.html" class="site-logo">
+					<img src="img/logo_light_purple.png" alt="">
+				</a>
+				<nav class="top-nav-area w-100">
+					<!-- Menu -->
+					<ul class="main-menu primary-menu">
+						<li><a href="#" onclick="openlist()">ONLINE</a>
+							<ul class="sub-menu">
+							<li><a href="#" onclick="openlist()">RPG</a></li>
+							<li><a href="#" onclick="openlist()">FPS</a></li>
+							<li><a href="#" onclick="openlist()">AOS</a></li>
+							<li><a href="#" onclick="openlist()">SPORTS</a></li>
+							<li><a href="#" onclick="openlist()">ACTION</a></li>
+							</ul>
+						</li>
+						<li><a href="#" onclick="openlist()">STEAM</a>
+							<ul class="sub-menu">
+								<li><a href="#" onclick="openlist()">RPG</a></li>
+								<li><a href="#" onclick="openlist()">FPS</a></li>
+								<li><a href="#" onclick="openlist()">AOS</a></li>
+								<li><a href="#" onclick="openlist()">SPORTS</a></li>
+								<li><a href="#"  onclick="openlist()">ACTION</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+<!-- Header section end -->
+	
+
+
+	<!-- Page top section -->
+	<section class="page-top-section set-bg" data-setbg="img/page-top-bg/3.jpg">
+		<div class="page-info">
+			<h2>로그인</h2>
+			
+		</div>
+	</section>
+	<!-- Page top end-->
+
+
+	<!-- Contact page -->
+	<section class="contact-page">
+		<div class="container">
+			<form id="loginForm">
+				<div class="row">
+					<div class="col-lg-7 order-2 order-lg-1">
+						<div class="register-form">
+						<span style="color: white; font-size: 25px;"> </span><br><br>
+						<span style="color:white; "> 아이디 </span><br>
+						<input id="id" type="text" minlength="6" maxlength="20" pattern="[a-zA-Z0-9]+" required ><br><br>
+							
+
+						<span style="color:white; " > 비밀번호 </span><br>					
+						<input id="pw" type="password" style="color:grey; font-size: 13px" minlength="8" maxlength="20" placeholder="영문(대문자, 소문자), 숫자, 특수문자 포함한8~20자" required> <br>
+							<!-- 비밀번호 **표시 -->
+						<a href='findMyId.html' class="link-secondary" style="color:white; font-style: italic; border-bottom: 1px solid white;" >
+							아이디/비밀번호를 잊으셨나요?
+						</a><br><br><br>
+						<button type="submit" id="log-in-button" class="site-btn" >로그인 </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button class="site-btn" onclick="window.location.href ='register.html'">회원가입</button>  <br>
+						
+					
+						<p style="color: white; font-size: 45px;">  <br>
+						<!-- 로그인창 -->
+					
+					
+					</div>				
+				</div>
+			</form>
+		</div>
+	</section>
+	<!-- Contact page end-->
+
+
+	
+			<!-- Footer section -->
+			<footer class="footer-section">
+				<div class="container">
+					<div class="copyright">2023 Team_GRI @ All rights reserved</div>
+				</div>
+			</footer>
+			<!-- Footer section end -->
+
+
+		
+			<script> //로그인 
+				document.getElementById('loginForm').addEventListener('submit', function (e) {
+						e.preventDefault(); // 폼 제출 기본동작 막기
+
+						// 입력한 아이디 비번 가져오기
+						var id = document.getElementById('id').value;
+						var pw = document.getElementById('pw').value;
+
+						// local storage에서 데이터 가져오기
+						var savedId = localStorage.getItem('id');
+						var savedPw = localStorage.getItem('pw');
+
+						// 아이디 비번에 local storage의 데이터와 일치하는지 확인
+						if (id === savedId && pw === savedPw) {
+							alert("로그인 성공!");
+							window.location.href ="loginindex.html";
+							
+						} else {
+							alert("아이디와 비밀번호를 다시 확인해 주세요.");
+						}
+					});
+
+
+					
+			</script>
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky-sidebar.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/modal.js"></script>
+
+	</body>
+</html>

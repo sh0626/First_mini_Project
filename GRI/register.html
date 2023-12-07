@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>회원가입 </title>
+	<meta charset="UTF-8">
+	<meta name="description" content="EndGam Gaming Magazine Template">
+	<meta name="keywords" content="endGam,gGaming, magazine, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon-16x16.png" rel="shortcut icon"/>
+
+	<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min2.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style22.css" />
+
+
+
+
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-warp">
+			<div class="user-panel d-flex justify-content-end">		
+				<p id="logout"><a href="login.html">로그인</a><a href="register.html">회원가입</a></p>
+			</div>
+			<div class="header-bar-warp d-flex">
+				<!-- site logo -->
+				<a href="index.html" class="site-logo">
+					<img src="img/logo_light_purple.png" alt="">
+				</a>
+				<nav class="top-nav-area w-100">
+					<!-- Menu -->
+					<ul class="main-menu primary-menu">
+						<li><a href="#" onclick="openlist()">ONLINE</a>
+							<ul class="sub-menu">
+							<li><a href="#" onclick="openlist()">RPG</a></li>
+							<li><a href="#" onclick="openlist()">FPS</a></li>
+							<li><a href="#" onclick="openlist()">AOS</a></li>
+							<li><a href="#" onclick="openlist()">SPORTS</a></li>
+							<li><a href="#" onclick="openlist()">ACTION</a></li>
+							</ul>
+						</li>
+						<li><a href="#" onclick="openlist()">STEAM</a>
+							<ul class="sub-menu">
+								<li><a href="#" onclick="openlist()">RPG</a></li>
+								<li><a href="#" onclick="openlist()">FPS</a></li>
+								<li><a href="#" onclick="openlist()">AOS</a></li>
+								<li><a href="#" onclick="openlist()">SPORTS</a></li>
+								<li><a href="#"  onclick="openlist()">ACTION</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- Header section end -->
+
+
+	<!-- Page top section -->
+	<section class="page-top-section set-bg" data-setbg="img/page-top-bg/3.jpg">
+		<div class="page-info">
+			<h2>회원가입</h2>
+			
+		</div>
+	</section>
+	<!-- Page top end-->
+
+
+	<!-- Contact page -->
+	<section class="contact-page">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 order-2 order-lg-1">
+					<form id="registerForm" class="register-form">
+					<p style="color: white; font-size: 25px;">
+						회원가입을 통해 더 다양한 서비스를 만나 보세요! <br>
+						<span style="color: white; font-size: 25px;">회원 정보를 입력해 주세요. </span><br>
+						<div style="text-align: right;">
+						<span style="color: white; font-size: 13px;">(<span style="color: red;"> * </span>) 필수 입력 사항</span><br>
+						</div>
+					</p>
+					<p>
+						<span style="color:white;"> <span style="color: red;">*&nbsp;&nbsp;</span>회원 아이디</span><br>
+						<input id="registerId" type="text" minlength="6" maxlength="20" pattern="[a-zA-Z0-9_-]+" required >&nbsp;&nbsp;
+						<button type="button" id="id-check-button" class="btn btn-outline-light" onclick="idCheck()">&nbsp; 중복 확인 &nbsp;</button><br>
+						<span style="color:white;  ">
+						<span style="color: red; ">*&nbsp;&nbsp;</span>이름</span><br>
+						<input id="memberName" type="text" pattern="[가-힣]+" minlength="2" maxlength="10" required ><br><br>
+					</p>
+					<!-- ------------------------------회원 아이디(영문숫자)/ 중복확인버튼/ 이름(한글)-------------------------------------------- -->
+					<p>
+					<!-- ------------------------------비번 input, 비번확인 (조건부합여부, 일치여부) -------------------------------------------- -->
+						<span style="color:white; font-size: 18px">
+							<span style="color: red; ">*&nbsp;&nbsp;</span>
+							비밀번호<br>
+						</span>
+						<input id="memberPw" type="password" class="pw" minlength="8" maxlength="20" required 
+						style="color:white; font-size: 13px" placeholder="영문(대문자, 소문자), 숫자, 특수문자 포함한8~20자"> <br>
+						<div>
+							<p class="passok">비밀번호 조건에 부합합니다!</p>
+						</div>
+						<div>
+							<p class="passno">비밀번호 조건에 맞게 다시 입력해 주세요.<br>
+								비밀번호는 영문(대문자, 소문자), 숫자, 특수문자를 모두 포함하여 8~20자로 작성해야 합니다.</p>
+						<span style="color:white; font-size: 18px"><span style="color: red; ">*&nbsp;&nbsp;</span>비밀번호 확인</span><br>
+						<input id="confirmPw" type="password" class="confirm" minlength="8" maxlength="20" placeholder="동일한 비밀번호를 입력해 주세요." required >	
+						<p class="match-message">비밀번호가 일치합니다.</p>
+						<p class="no-match-message">비밀번호가 일치하지 않습니다. 다시 확인해주세요.</p>
+						</div>		
+					</p> 
+					<ul class="passReq" >
+						각 비밀번호 유효성 항목
+						<li class="lowercase"></li> 
+						<li class="uppercase"></li>
+						<li class="number"></li>
+						<li class="special"></li> </li>
+						<li class="character-length"></li>
+					</ul>
+					<!-- 전화번호 + 인증버튼 -->
+					<span style="color:white;  margin-top: 50px;">
+						<span style="color: red; ">*&nbsp;&nbsp;</span>
+						휴대폰 번호 <br>
+					</span>
+					<input id="memberPhone" type="text" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" minlength="13" maxlength="13" placeholder="010-1234-5678"  required> &nbsp;
+					<button type="button" id=send-code-button class="btn btn-outline-light" width="20px" onclick="sendCode()" >인증번호 발송</button><br>
+					<input type="text" style="color:white; font-size: 13px" minlength="6" maxlength="6" required placeholder="인증번호를 입력하세요">&nbsp;&nbsp;
+					<button type="button" id=code-check-button class="btn btn-outline-light"onclick="codeCheck()" >&nbsp;&nbsp;인증하기&nbsp;&nbsp;</button><br><br>
+						<!-- 휴대폰 코드 6자 -->
+					<span style="color:white;  margin-top: 50px;">
+						<span style="color: red; ">*&nbsp;&nbsp;</span>
+						이메일주소
+					</span><br>
+					<input id="memberEmail" type="email" minlength="10" maxlength="30" pattern="^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}" required > &nbsp;
+						<button type="button" id="send-email-button" class="btn btn-outline-light" title="between 10 and 30 letters" onclick="sendEmail()">이메일주소 인증</button><br>				
+			
+					<span style="color:white; font-size: 18px">가장 좋아하는 게임은? (선택사항)</span><br>
+					<input type="text" ><br><br>
+					<div class="bbbb">
+					<button type="submit" class="site-btn" id="create-acc-button"  >회원가입</button>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<button class="site-btn" onclick="window.location.href ='index.html'">취소</button>
+					</div>
+					<!-- 로그인창 -->				
+				</form>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- Contact page end-->
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">			
+			<div class="copyright"><a href="">Colorlib</a> 2023 Team_GRI @ All rights reserved</div>
+		</div>
+
+	</footer>
+	<!-- Footer section end -->
+
+<!--====== Javascripts & Jquery ======-->
+
+
+<script>
+	        document.getElementById('registerForm').addEventListener('submit', function (e) {
+					e.preventDefault(); // 폼 제출 기본동작 막기
+					// 입력 된 아이디 비밀번호 가져오기
+					var memberId = document.getElementById('registerId').value;
+					var memberPw = document.getElementById('memberPw').value;
+					// 입력 된 아이디 비밀번호 local storage에 저장
+					localStorage.setItem('id', memberId);
+					localStorage.setItem('pw', memberPw);
+
+					createAcc();
+				});
+
+         document.getElementById('loginForm').addEventListener('submit', function (e) {
+				e.preventDefault(); // 폼 제출 기본동작 막기
+				// 입력한 아이디 비밀번호 가져오기
+				var id = document.getElementById('id').value;
+				var pw = document.getElementById('pw').value;
+				// local storage에서 데이터 가져오기
+				var savedId = localStorage.getItem('id');
+				var savedPw = localStorage.getItem('pw');
+				// 아이디 비번에 local storage의 데이터와 일치하는지 확인
+				if (id === savedId && pw === savedPw) {
+					logIn();
+				} else {
+					alert('아이디/비밀번호 확인바람');
+				}
+			});
+    </script>
+
+</script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky-sidebar.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/modal.js"></script>	
+	</body>
+</html>

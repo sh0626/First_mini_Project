@@ -1,0 +1,186 @@
+.game-single-cont{
+     background-color:#3e2256; 
+    border-radius: 20px;
+} 
+.games-title{ 
+    color:#C4A7C9;
+    margin: 40px;
+}
+.gm-table{
+	 /* background-color: rgb(47, 33, 46);  */
+   
+    color: #C4A7C9 ;
+    letter-spacing: -0.05em;
+    box-sizing: content-box;
+    border-spacing: 0;
+    /* font-family: inherit; */
+    /* line-height: inherit; */
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-top: 10px;
+
+    display: inline-table;
+    
+    font-size: 20px;
+    
+}
+
+.gm-top{
+    border-bottom: 1.5px solid#928d92;
+	color: white;
+	font-size: 50px;
+    text-align: center;
+}
+
+.gm-table-rows{
+    color: white;
+    letter-spacing: -0.05em;
+    border-spacing: 0;
+    /* border-bottom: 1px solid #fff; */
+    /* font-size: inherit; */
+	font-size: 20px;
+    /* font-family: inherit; */
+    /* line-height: inherit; */
+    border-collapse: collapse;
+    /* box-sizing: border-box; */
+    /* display: table-row-group; */
+	line-height: 40px;
+	margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.gameintro{
+    font-weight: bold;
+    font-size: 20px;
+    color: darkred;
+    padding-bottom: 10px;
+}
+.replbox{
+    box-sizing:border-box;
+    display:flex;
+    padding:0;
+    height:200px;
+    justify-content:center;
+    text-align: center;
+}
+.authorcon{
+    width:73px;
+    height:73px;
+    /*border-radius:50% 50% 50% 50%;*/
+    
+    margin-right: 10px;
+    color:#fff;
+    
+    text-align:center;
+    margin-top:55px;
+    object-fit:contain;
+
+}
+.authorcon p{ /*anyone*/
+    color:white;
+    margin-top:7px;
+}
+/*
+.authorlayer{
+color:white;
+background:#111111;
+border:1px solid rgba(107, 23, 179, 0.24);
+text-align: center;
+height:127px;width:130px;
+margin-right:10px;
+
+}*/
+.gs-title{
+    max-width: 1496px;
+	margin: 0 auto;
+	font-size: 16px;
+	color: #fff;
+	padding-left: 60px;
+}
+.genre,
+.gameintrodes p,
+.genredes p,
+.agelimitdes p{
+    color:white;
+}
+.gameintrodes{
+    width:1149px;
+}
+
+.replhead{
+    margin-top: 90px;
+    color:white;
+    text-align:center;
+}
+.repldevback{
+    background-color: #3e2256;
+}
+.repldev h2 {
+	font-size: 48px;
+	color: #fff;
+	font-weight: 700;
+	
+	text-transform: uppercase;
+	margin-bottom: 73px;
+}
+.textarea{
+    padding: 10px 0 0 10px; 
+    margin: 10px 0 0 10px;
+ }
+ .replfake{
+    width:1149;
+    /*display:flex;
+    justify-content:center;*/
+    margin-left:auto; margin-right: auto;
+   
+      
+} 
+ 
+ table{
+    width:1149px;
+    color:white; 
+  }
+  table hr{
+    background:white;
+  }
+  td .nickn{
+    font-size:20px;
+    color:#b01ba5;
+   
+    
+   
+    padding: .4rem 0;
+    border-radius:2rem;
+  }
+
+  td .replies{
+    color:white;
+    letter-spacing: 2px;
+    
+  }
+  .replrefresh{
+    width:120px; height:45px;
+    color:white;
+    background-color:#3e2256;
+    padding: .5em 0;
+    border-radius:2rem;
+    text-align: center;
+    margin-right: auto;
+    
+  }
+  .replrefresh a:link{
+    color:white;
+    }
+  
+  .replrefresh a:visited{
+    color:white;
+}
+
+.write-text{
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
